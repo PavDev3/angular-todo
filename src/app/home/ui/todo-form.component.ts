@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, inject } from "@angular/core";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
-import { Todo } from "../../shared/interfaces/todo";
+import { CreateTodo } from "../../shared/interfaces/todo";
 
 @Component ({
     standalone: true,
@@ -28,5 +28,5 @@ export class TodoFormComponent {
         description: [''],
     });
 
-    @Output() todoSubmitted = new EventEmitter<Todo>();
+    @Output() todoSubmitted = new EventEmitter<CreateTodo>();
 }
