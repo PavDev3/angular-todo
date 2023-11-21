@@ -6,6 +6,12 @@ import { RouterLink } from "@angular/router";
     standalone: true,
     selector: 'app-todo-list',
     imports: [RouterLink],
+    styles: [
+        `ul {
+            margin: 0;
+            padding: 1rem;
+        }`,
+    ],
     template: `
     <ul>
         @for (todo of todos; track todo.id){

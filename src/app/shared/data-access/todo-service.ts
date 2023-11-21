@@ -18,5 +18,10 @@ export class TodoService {
         ...todos,
         {...todo,id: Date.now().toString()}
     ]);
-      }
+    }
+
+    // Método para eliminar un todo de la lista de todos. Se utiliza el método update() proporcionado por la función signal para actualizar la lista de todos.
+    removeTodoById(id: string) {
+        this.#todos.update((todos) => todos.filter((todo) => todo.id !== id));
+    }
 }
